@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Case Study | Asmaa Elshahat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .case-nav {
+            background: rgba(13, 17, 23, 0.9);
+            padding: 20px 50px;
+            border-bottom: 1px solid rgba(0, 242, 165, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        .case-nav a {
+            color: #00f2a5;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+        .case-nav a:hover {
+            color: #fff;
+        }
+        .case-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .case-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .case-header h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .case-header h2 {
+            color: #00f2a5;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        .tech-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .tech-tags span {
+            background: rgba(0, 242, 165, 0.1);
+            color: #00f2a5;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(0, 242, 165, 0.3);
+        }
+        .case-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .case-section h3 {
+            color: #00f2a5;
+            border-bottom: 1px solid rgba(0, 242, 165, 0.2);
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        .case-section p, .case-section li {
+            font-size: 1.05rem;
+            color: #a3b3bc;
+        }
+        .case-section ul {
+            padding-left: 20px;
+        }
+        .dashboard-img {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 242, 165, 0.3);
+            margin: 20px 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+        .download-btn {
+            display: inline-block;
+            background: #00f2a5;
+            color: #0d1117;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .download-btn:hover {
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0, 242, 165, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="case-nav">
+        <a href="index.html#projects"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    </div>
+
+    <div class="case-container">
+        
+        <div class="case-header">
+            <h1>CENTRAL SUPERSTORE BI DASHBOARD</h1>
+            <h2>Transforming data into visual stories for strategic growth.</h2>
+            <div class="tech-tags">
+                <span>Power BI</span>
+                <span>Power Query</span>
+                <span>DAX</span>
+                <span>Data Modeling</span>
+            </div>
+        </div>
+
+        <div class="case-section">
+            <h3><i class="fa-solid fa-bullseye"></i> Project Overview</h3>
+            <p>This project leverages Power BI to analyze the performance of the Central Superstore. By designing a comprehensive and interactive dashboard, the goal was to provide real-time insights into sales trends, customer segmentation, and product profitability.</p>
+        </div>
+
+        <div class="case-section">
+            <h3><i class="fa-solid fa-broom"></i> Data Transformation (Power Query)</h3>
+            <p>To ensure high data quality before analysis, I utilized Power Query for rigorous data cleaning:</p>
+            <ul>
+                <li><strong>Dimensional Reduction:</strong> Removed unnecessary columns to optimize the dataset size and improve performance.</li>
+                <li><strong>Data Integrity:</strong> Filtered out blank rows and removed duplicate records to maintain absolute accuracy.</li>
+                <li><strong>Formatting:</strong> Standardized data types across all columns for seamless DAX calculations.</li>
+            </ul>
+        </div>
+
+        <div class="case-section">
+            <h3><i class="fa-solid fa-calculator"></i> Custom Metrics (DAX)</h3>
+            <p>Beyond standard aggregations, I created calculated measures using DAX to extract deeper business insights. For example, I developed a dynamic measure to calculate the <strong>Average Order Value (AOV)</strong>:</p>
+            <p><code>Average order value = SUM('Central_Region'[sales]) / DISTINCTCOUNT('Central_Region'[Order ID])</code></p>
+        </div>
+
+        <div class="case-section">
+            <h3><i class="fa-solid fa-chart-line"></i> Key Performance Indicators</h3>
+            <ul>
+                <li><strong>Total Sales:</strong> 501.24K</li>
+                <li><strong>Total Profit:</strong> 39.71K</li>
+                <li><strong>Total Orders:</strong> 2.323K</li>
+                <li><strong>Average Order Value:</strong> 426.59</li>
+            </ul>
+        </div>
+
+        <div class="case-section">
+            <h3><i class="fa-solid fa-desktop"></i> Interactive Dashboard</h3>
+            <img src="Screenshot 2026-08-29 004332.png" alt="Power BI Dashboard" class="dashboard-img">
+            <p>The final deliverable is a Dark-Themed, fully interactive dashboard featuring timeline slicers (2013-2017), dynamic tooltips, and cross-filtering across categories, segments, and top customers.</p>
+        </div>
+
+        <div class="case-section" style="text-align: center;">
+            <h3><i class="fa-solid fa-file-pdf"></i> Workflow & Documentation</h3>
+            <p>Review the complete step-by-step documentation, from Power Query transformations to final dashboard design.</p>
+            <!-- الزرار ده مربوط بملف الـ PDF بتاع الباور بي آي -->
+            <a href="PowerBI.pdf" target="_blank" class="download-btn">View Workflow Details <i class="fa-solid fa-file-pdf"></i></a>
+        </div>
+
+    </div>
+
+</body>
+</html>

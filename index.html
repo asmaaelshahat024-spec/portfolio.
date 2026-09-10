@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asmaa Elshahat | Data Analyst</title>
+    <!-- خطوط جوجل -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- فيديو الخلفية -->
+    <video autoplay muted loop playsinline preload="auto" id="bg-video">
+        <source src="bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <!-- شريط التنقل العلوي -->
+    <header class="navbar">
+        <div class="nav-brand">Asmaa<span>.</span></div>
+        <nav class="nav-links">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#resume" class="nav-link">Resume</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- 1. سكشن الواجهة (Home) - متظبط بمحاذاة تامة مع الصورة -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Hi, I'm Asmaa Elshahat</h1>
+                <h2>Data Analyst</h2>
+                <p>
+                    I Don't Just Visualize Numbers.<br>
+                    I Uncover the Narrative That Grows Your Business.
+                </p>
+                <div class="social-icons">
+                    <a href="mailto:asmaaelshahat024@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/asmaa-elshahat-497501361" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/201010930621" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="photo.jpg.jpeg" alt="Asmaa Elshahat">
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. سكشن من أنا (About) -->
+    <section id="about" class="story-section">
+        <div class="story-container">
+            <h2 class="section-title">My Journey</h2>
+            <p class="story-text">
+                As a business undergraduate at Alexandria University, I realized early on that raw numbers without context are just noise. My journey into data analytics is driven by a deep passion for translating complex datasets into strategic, actionable decisions. I don't just write code or build dashboards; I bridge the gap between technical data and business growth. Through rigorous hands-on projects—from building dynamic Power BI dashboards to executing advanced SQL queries and Python scripts—I have developed a robust analytical mindset that focuses on solving real-world business challenges.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. سكشن الخدمات (Services) -->
+    <section id="services" class="services-section">
+        <h2 class="section-title">My Data-Driven Approach</h2>
+        <div class="cards-container">
+            <div class="card">
+                <i class="fas fa-database"></i>
+                <h3>1. Collect & Clean</h3>
+                <p>Gathering comprehensive datasets and transforming raw, messy data into structured formats.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>2. Analyze & Discover</h3>
+                <p>Executing advanced queries and statistical analysis to uncover key business metrics and trends.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-pie"></i>
+                <h3>3. Visualize & Present</h3>
+                <p>Creating clear, interactive dashboards that translate complex findings into compelling stories.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. سكشن المشاريع الاحترافي (Featured Rows) -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Real-World Projects</h2>
+        <div class="projects-wrapper">
+            
+            <!-- المشروع الأول: الإكسيل -->
+            <div class="project-row">
+                <div class="project-img-box">
+                    <img src="Screenshot 2026-08-13 173542.png" alt="Superstore Excel Dashboard">
+                </div>
+                <div class="project-details">
+                    <span class="project-tag">Advanced Analytics • Case Study</span>
+                    <h3>Superstore Sales & Profit Analysis</h3>
+                    <p class="project-desc">A deep-dive business case study analyzing sales revenue, tracking core KPIs, and evaluating regional performance.</p>
+                    <div class="tech-tags">
+                        <span>Advanced Excel</span>
+                        <span>Power Query</span>
+                        <span>Power Pivot</span>
+                    </div>
+                    <ul class="project-highlights">
+                        <li><i class="fas fa-check-circle"></i> $2.29M Total Sales Tracked</li>
+                        <li><i class="fas fa-check-circle"></i> Comprehensive Profitability Analysis</li>
+                        <li><i class="fas fa-check-circle"></i> Regional Performance Optimization</li>
+                    </ul>
+                    <a href="superstore.html" class="cert-btn">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- المشروع الثاني: باور بي آي -->
+            <div class="project-row">
+                <div class="project-img-box">
+                    <img src="Screenshot 2026-08-29 004332.png" alt="Central Superstore Power BI Dashboard">
+                </div>
+                <div class="project-details">
+                    <span class="project-tag">Power BI • DAX • Interactive</span>
+                    <h3>Central Superstore BI Dashboard</h3>
+                    <p class="project-desc">An interactive multi-page dashboard delivering real-time performance insights and dynamic segment filtering.</p>
+                    <div class="tech-tags">
+                        <span>Power BI</span>
+                        <span>Power Query</span>
+                        <span>DAX</span>
+                    </div>
+                    <ul class="project-highlights">
+                        <li><i class="fas fa-check-circle"></i> 501.24K Total Sales & 39.71K Profit</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced DAX Measures & Modeling</li>
+                        <li><i class="fas fa-check-circle"></i> Dark-Themed Executive View</li>
+                    </ul>
+                    <a href="powerbi.html" class="cert-btn">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. سكشن التعليم والشهادات والمهارات (Resume) -->
+    <section id="resume" class="resume-section">
+        <div class="resume-container">
+            
+            <!-- العمود الأول: التعليم والشهادات -->
+            <div class="resume-col">
+                <h2 class="section-title" style="text-align: left; font-size: 1.8rem; margin-bottom: 25px;">Education & Certifications</h2>
+                
+                <div class="resume-item">
+                    <div class="icon-box"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="item-details">
+                        <h3>Bachelor of Business</h3>
+                        <p>Alexandria University</p>
+                    </div>
+                </div>
+                
+                <div class="resume-item">
+                    <div class="icon-box"><i class="fas fa-certificate"></i></div>
+                    <div class="item-details">
+                        <h3>IBM Data Fundamentals</h3>
+                        <a href="ibm.cert.pdf" target="_blank" class="cert-btn">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="resume-item">
+                    <div class="icon-box"><i class="fab fa-python"></i></div>
+                    <div class="item-details">
+                        <h3>Python Fundamentals</h3>
+                        <a href="python1.cert.pdf" target="_blank" class="cert-btn">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="resume-item">
+                    <div class="icon-box"><i class="fas fa-award"></i></div>
+                    <div class="item-details">
+                        <h3>Microsoft Office Specialist (MOS)</h3>
+                        <a href="MOS.cert.pdf" target="_blank" class="cert-btn">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- شهادة AI For You -->
+                <div class="resume-item">
+                    <div class="icon-box"><i class="fas fa-robot"></i></div>
+                    <div class="item-details">
+                        <h3>AI for You</h3>
+                        <a href="ai.cert.pdf" target="_blank" class="cert-btn">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- العمود الثاني: المهارات الفنية والشخصية -->
+            <div class="resume-col">
+                <h2 class="section-title" style="text-align: left; font-size: 1.8rem; margin-bottom: 25px;">Skills & Expertise</h2>
+                
+                <div class="skill-category-title">Technical Skills</div>
+                <div class="skills-list" style="margin-bottom: 25px;">
+                    <span>Power BI</span>
+                    <span>SQL</span>
+                    <span>Python</span>
+                    <span>Tableau</span>
+                    <span>Advanced Excel</span>
+                    <span>PowerPoint</span>
+                    <span>Looker</span>
+                </div>
+
+                <div class="skill-category-title">Personal & Business Skills</div>
+                <div class="skills-list">
+                    <span>Business Acumen</span>
+                    <span>Data Storytelling</span>
+                    <span>Problem Solving</span>
+                    <span>Communication</span>
+                    <span>Time Management</span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 6. سكشن التواصل (Contact) -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="story-text">Ready to turn your data into your biggest asset? Feel free to reach out!</p>
+            <div class="contact-buttons">
+                <a href="mailto:asmaaelshahat024@gmail.com" class="btn">Send an Email</a>
+                <a href="https://wa.me/201010930621" class="btn btn-outline" target="_blank">WhatsApp Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- كود الجافاسكريبت لإنارة العناوين -->
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.4
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute("id");
+                    navLinks.forEach(link => {
+                        link.classList.remove("active");
+                        if (link.getAttribute("href") === `#${id}`) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
