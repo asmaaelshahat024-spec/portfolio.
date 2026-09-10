@@ -258,5 +258,12 @@
             observer.observe(section);
         });
     </script>
+    <!-- كود إجباري عشان الفيديو يفضل يعيد نفسه وميوقفش أبداً -->
+    <script>
+        document.getElementById('bg-video').addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+        });
+    </script>
 </body>
 </html>

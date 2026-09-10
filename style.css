@@ -156,6 +156,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .hero-content h1 {
