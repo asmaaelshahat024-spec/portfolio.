@@ -591,4 +591,66 @@ section {
         max-width: 280px;
         height: auto;
     }
+/* --- تعديلات الشهادات وشريط التحميل (DEPI) --- */
+
+/* تصغير وتلميم كروت الشهادات */
+.resume-item {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.resume-item:hover {
+    border-color: rgba(0, 242, 165, 0.4);
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateX(5px);
+}
+
+.icon-box {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    margin-right: 12px;
+}
+
+.item-details h3 {
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.item-details p {
+    font-size: 0.85rem;
+}
+
+/* تنسيق شريط تحميل منحة DEPI */
+.progress-container {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.progress-bg {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    height: 6px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #00f2a5;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 242, 165, 0.5);
+}
 }
