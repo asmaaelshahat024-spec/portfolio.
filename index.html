@@ -27,11 +27,12 @@
             <a href="#services" class="nav-link">Services</a>
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#resume" class="nav-link">Resume</a>
-            <a href="#contact" class="nav-link">Contact</a>
+            <!-- زرار Let's Talk -->
+            <a href="#contact" class="lets-talk-btn">Let's Talk</a>
         </nav>
     </header>
 
-    <!-- 1. سكشن الواجهة (Home) - متظبط بمحاذاة تامة مع الصورة -->
+    <!-- 1. سكشن الواجهة (Home) -->
     <section id="home" class="hero-section">
         <div class="hero-container">
             <div class="hero-content">
@@ -41,10 +42,13 @@
                     I Don't Just Visualize Numbers.<br>
                     I Uncover the Narrative That Grows Your Business.
                 </p>
-                <div class="social-icons">
-                    <a href="mailto:asmaaelshahat024@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/asmaa-elshahat-497501361" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/201010930621" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <!-- التعديلات الجديدة: زرار بدون سهم، ولينكد إن والإيميل بس -->
+                <div class="hero-actions">
+                    <a href="#projects" class="explore-btn">Explore My Dashboards</a>
+                    <div class="social-icons-small">
+                        <a href="https://www.linkedin.com/in/asmaa-elshahat-497501361" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:asmaaelshahat024@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="hero-image">
@@ -138,7 +142,8 @@
 
         </div>
     </section>
-<!-- 5. سكشن التعليم والشهادات والمهارات (Resume) -->
+
+    <!-- 5. سكشن التعليم والشهادات والمهارات (Resume) -->
     <section id="resume" class="resume-section">
         <div class="resume-container">
             
@@ -155,14 +160,12 @@
                     </div>
                 </div>
 
-                <!-- منحة DEPI (مع شريط التحميل) -->
+                <!-- منحة DEPI -->
                 <div class="resume-item">
                     <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
                     <div class="item-details" style="width: 100%;">
                         <h3>Digital Egypt Pioneers Initiative (DEPI)</h3>
                         <p>Junior Data Analyst Track - MCIT</p>
-                        
-                        <!-- شريط التحميل -->
                         <div class="progress-container">
                             <div class="progress-text">
                                 <span>Status: In Progress...</span>
@@ -175,7 +178,7 @@
                     </div>
                 </div>
                 
-                <!-- IBM -->
+                <!-- الشهادات -->
                 <div class="resume-item">
                     <div class="icon-box"><i class="fas fa-certificate"></i></div>
                     <div class="item-details">
@@ -183,8 +186,6 @@
                         <a href="ibm.cert.pdf" target="_blank" class="cert-btn">View Certificate <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-
-                <!-- Python -->
                 <div class="resume-item">
                     <div class="icon-box"><i class="fab fa-python"></i></div>
                     <div class="item-details">
@@ -192,8 +193,6 @@
                         <a href="python1.cert.pdf" target="_blank" class="cert-btn">View Certificate <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-
-                <!-- MOS -->
                 <div class="resume-item">
                     <div class="icon-box"><i class="fas fa-award"></i></div>
                     <div class="item-details">
@@ -201,8 +200,6 @@
                         <a href="MOS.cert.pdf" target="_blank" class="cert-btn">View Certificate <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-
-                <!-- شهادة AI For You -->
                 <div class="resume-item">
                     <div class="icon-box"><i class="fas fa-robot"></i></div>
                     <div class="item-details">
@@ -212,10 +209,9 @@
                 </div>
             </div>
             
-            <!-- العمود الثاني: المهارات الفنية والشخصية -->
+            <!-- العمود الثاني: المهارات -->
             <div class="resume-col">
                 <h2 class="section-title" style="text-align: left; font-size: 1.8rem; margin-bottom: 25px;">Skills & Expertise</h2>
-                
                 <div class="skill-category-title">Technical Skills</div>
                 <div class="skills-list" style="margin-bottom: 25px;">
                     <span>Power BI</span>
@@ -226,7 +222,6 @@
                     <span>PowerPoint</span>
                     <span>Looker</span>
                 </div>
-
                 <div class="skill-category-title">Personal & Business Skills</div>
                 <div class="skills-list">
                     <span>Business Acumen</span>
@@ -239,6 +234,7 @@
             
         </div>
     </section>
+
     <!-- 6. سكشن التواصل (Contact) -->
     <section id="contact" class="contact-section">
         <div class="contact-container">
@@ -251,17 +247,10 @@
         </div>
     </section>
 
-    <!-- كود الجافاسكريبت لإنارة العناوين -->
     <script>
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll(".nav-link");
-
-        const observerOptions = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.4
-        };
-
+        const observerOptions = { root: null, rootMargin: "0px", threshold: 0.4 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -275,13 +264,8 @@
                 }
             });
         }, observerOptions);
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
-    <!-- كود إجباري عشان الفيديو يفضل يعيد نفسه وميوقفش أبداً -->
-    <script>
+        sections.forEach(section => { observer.observe(section); });
+        
         document.getElementById('bg-video').addEventListener('ended', function() {
             this.currentTime = 0;
             this.play();
