@@ -8,15 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- الأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- مكتبة أنيميشن التمرير AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- فيديو الخلفية -->
-    <video autoplay muted loop playsinline preload="auto" id="bg-video">
-        <source src="bg-video.mp4" type="video/mp4">
-    </video>
-    <div class="overlay"></div>
+    <!-- نقاط توهج خلفية لإضفاء بهجة وحيوية -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
 
     <!-- شريط التنقل العلوي -->
     <header class="navbar">
@@ -29,20 +29,24 @@
             <a href="#resume" class="nav-link">Resume</a>
             <!-- زرار Let's Talk -->
             <a href="#contact" class="lets-talk-btn">Let's Talk</a>
+            <!-- زرار تبديل الوضع الليلي / النهاري -->
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
         </nav>
     </header>
 
-    <!-- 1. سكشن الواجهة (Home) -->
+    <!-- 1. سكشن الواجهة (Home) بدون بوكس -->
     <section id="home" class="hero-section">
         <div class="hero-container">
-            <div class="hero-content">
+            <div class="hero-content" data-aos="fade-right">
                 <h1>Hi, I'm Asmaa Elshahat</h1>
-                <h2>Data Analyst</h2>
+                <h2><span id="typed-text"></span><span class="type-cursor">|</span></h2>
                 <p>
                     I Don't Just Visualize Numbers.<br>
                     I Uncover the Narrative That Grows Your Business.
                 </p>
-                <!-- التعديلات الجديدة: زرار بدون سهم، ولينكد إن والإيميل بس -->
+                <!-- الأزرار ولينكد إن والإيميل -->
                 <div class="hero-actions">
                     <a href="#projects" class="explore-btn">Explore My Dashboards</a>
                     <div class="social-icons-small">
@@ -51,15 +55,21 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="photo.jpg.jpeg" alt="Asmaa Elshahat">
+            <div class="hero-image" data-aos="fade-left">
+                <!-- حاوية الصورة مع وميض نيون مشع -->
+                <div class="hero-img-glow-wrapper">
+                    <div class="image-pulse-glow"></div>
+                    <div class="hero-img-inner">
+                        <img src="photo.jpg.jpeg" alt="Asmaa Elshahat">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. سكشن من أنا (About) -->
+    <!-- 2. سكشن من أنا (About) - كرت جلاس زجاجي -->
     <section id="about" class="story-section">
-        <div class="story-container">
+        <div class="story-container glass-card" data-aos="fade-up">
             <h2 class="section-title">My Journey</h2>
             <p class="story-text">
                 As a business undergraduate at Alexandria University, I realized early on that raw numbers without context are just noise. My journey into data analytics is driven by a deep passion for translating complex datasets into strategic, actionable decisions. I don't just write code or build dashboards; I bridge the gap between technical data and business growth. Through rigorous hands-on projects—from building dynamic Power BI dashboards to executing advanced SQL queries and Python scripts—I have developed a robust analytical mindset that focuses on solving real-world business challenges.
@@ -67,21 +77,21 @@
         </div>
     </section>
 
-    <!-- 3. سكشن الخدمات (Services) -->
+    <!-- 3. سكشن الخدمات (Services) - كروت جلاس زجاجية -->
     <section id="services" class="services-section">
-        <h2 class="section-title">My Data-Driven Approach</h2>
+        <h2 class="section-title" data-aos="fade-up">My Data-Driven Approach</h2>
         <div class="cards-container">
-            <div class="card">
+            <div class="card glass-card" data-aos="fade-up" data-aos-delay="100">
                 <i class="fas fa-database"></i>
                 <h3>1. Collect & Clean</h3>
                 <p>Gathering comprehensive datasets and transforming raw, messy data into structured formats.</p>
             </div>
-            <div class="card">
+            <div class="card glass-card" data-aos="fade-up" data-aos-delay="200">
                 <i class="fas fa-chart-line"></i>
                 <h3>2. Analyze & Discover</h3>
                 <p>Executing advanced queries and statistical analysis to uncover key business metrics and trends.</p>
             </div>
-            <div class="card">
+            <div class="card glass-card" data-aos="fade-up" data-aos-delay="300">
                 <i class="fas fa-chart-pie"></i>
                 <h3>3. Visualize & Present</h3>
                 <p>Creating clear, interactive dashboards that translate complex findings into compelling stories.</p>
@@ -89,13 +99,13 @@
         </div>
     </section>
 
-    <!-- 4. سكشن المشاريع الاحترافي (Featured Rows) -->
+    <!-- 4. سكشن المشاريع الاحترافي (Grid جلاس عريض) -->
     <section id="projects" class="projects-section">
-        <h2 class="section-title">Real-World Projects</h2>
+        <h2 class="section-title" data-aos="fade-up">Real-World Projects</h2>
         <div class="projects-wrapper">
             
             <!-- المشروع الأول: الإكسيل -->
-            <div class="project-row">
+            <div class="project-row glass-card" data-aos="fade-up">
                 <div class="project-img-box">
                     <img src="Screenshot 2026-08-13 173542.png" alt="Superstore Excel Dashboard">
                 </div>
@@ -118,7 +128,7 @@
             </div>
 
             <!-- المشروع الثاني: باور بي آي -->
-            <div class="project-row">
+            <div class="project-row glass-card" data-aos="fade-up">
                 <div class="project-img-box">
                     <img src="Screenshot 2026-08-29 004332.png" alt="Central Superstore Power BI Dashboard">
                 </div>
@@ -143,12 +153,12 @@
         </div>
     </section>
 
-    <!-- 5. سكشن التعليم والشهادات والمهارات (Resume) -->
+    <!-- 5. سكشن التعليم والشهادات والمهارات (Resume) - جلاس -->
     <section id="resume" class="resume-section">
         <div class="resume-container">
             
             <!-- العمود الأول: التعليم والشهادات -->
-            <div class="resume-col">
+            <div class="resume-col glass-card" data-aos="fade-right">
                 <h2 class="section-title" style="text-align: left; font-size: 1.8rem; margin-bottom: 25px;">Education & Certifications</h2>
                 
                 <!-- الجامعة -->
@@ -210,7 +220,7 @@
             </div>
             
             <!-- العمود الثاني: المهارات -->
-            <div class="resume-col">
+            <div class="resume-col glass-card" data-aos="fade-left">
                 <h2 class="section-title" style="text-align: left; font-size: 1.8rem; margin-bottom: 25px;">Skills & Expertise</h2>
                 <div class="skill-category-title">Technical Skills</div>
                 <div class="skills-list" style="margin-bottom: 25px;">
@@ -237,7 +247,7 @@
 
     <!-- 6. سكشن التواصل (Contact) -->
     <section id="contact" class="contact-section">
-        <div class="contact-container">
+        <div class="contact-container glass-card" data-aos="zoom-in">
             <h2 class="section-title">Let's Work Together</h2>
             <p class="story-text">Ready to turn your data into your biggest asset? Feel free to reach out!</p>
             <div class="contact-buttons">
@@ -247,10 +257,78 @@
         </div>
     </section>
 
+    <!-- مكتبة AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+        // تشغيل أنيميشن التمرير
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: false,
+            offset: 80
+        });
+
+        // تأثير المسمى الوظيفي
+        const titles = ["Data Analyst", "Business Intelligence Specialist", "Data Storyteller"];
+        let titleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typedElement = document.getElementById("typed-text");
+
+        function typeEffect() {
+            const currentTitle = titles[titleIndex];
+            if (isDeleting) {
+                typedElement.textContent = currentTitle.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedElement.textContent = currentTitle.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIndex === currentTitle.length) {
+                typeSpeed = 1800;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                titleIndex = (titleIndex + 1) % titles.length;
+                typeSpeed = 400;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+        document.addEventListener("DOMContentLoaded", typeEffect);
+
+        // وضع ليلي / نهاري (Theme Toggle)
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+
+        // قراءة الاختيار السابق إن وجد
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-theme');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            const isLight = document.body.classList.contains('light-theme');
+            
+            if (isLight) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'light');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // مراقبة الروابط لتحديث السكشن النشط
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll(".nav-link");
-        const observerOptions = { root: null, rootMargin: "0px", threshold: 0.4 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -263,13 +341,8 @@
                     });
                 }
             });
-        }, observerOptions);
+        }, { root: null, rootMargin: "0px", threshold: 0.3 });
         sections.forEach(section => { observer.observe(section); });
-        
-        document.getElementById('bg-video').addEventListener('ended', function() {
-            this.currentTime = 0;
-            this.play();
-        });
     </script>
 </body>
 </html>
