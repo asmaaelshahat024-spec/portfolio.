@@ -801,4 +801,10 @@ section {
         width: 260px;
         height: 330px;
     }
-}
+    .navbar {
+        background: var(--bg-color) !important;
+    }
+    .hero-section {
+        padding-top: 160px !important;
+    }
+    }
