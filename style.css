@@ -769,15 +769,18 @@ section {
     }
 
     /* شريط تنقل متناسق بلون الصفحة وثابت بدون مط للشاشة */
-    .navbar {
-        background: var(--bg-color) !important;
+   .navbar {
+        background: var(--glass-bg) !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        border-bottom: 1px solid var(--glass-border) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
         flex-direction: column;
         gap: 10px;
         padding: 12px 4% !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
-    
     .nav-links {
         display: flex;
         flex-wrap: wrap;
